@@ -1,0 +1,34 @@
+.popupWrapper {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.popupBody {
+  box-sizing: border-box;
+  z-index: 9999;
+  padding: 20px;
+  background: white;
+  border: 1px solid black;
+  max-height: calc(100% - 40px);
+  max-width: 570px;
+  overflow-y: auto;
+}
+
+.popupBody .textItem {
+  text-align: center;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+
+.loading {
+  margin: 0;
+  padding-top: 15px;
+}

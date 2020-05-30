@@ -1,0 +1,24 @@
+#control-panel {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+.format-actions {
+  display: flex;
+  align-items: flex-end;
+}
+
+.format-actions:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.actionsType {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.format-action:not(:last-child) {
+  margin-right: 5px;
+}

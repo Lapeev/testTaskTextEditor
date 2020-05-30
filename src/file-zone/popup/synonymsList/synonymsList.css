@@ -1,0 +1,25 @@
+.synonymsListTitle {
+  margin: 0 0 15px 0;
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+.synonymsList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.synonymsItem {
+  padding: 5px;
+}
+
+.synonymsItemText {
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 3px 5px;
+  cursor: pointer;
+}
