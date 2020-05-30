@@ -63,6 +63,24 @@ class ControlPanel extends Component {
             <span>&gt;&gt;</span>
           </button>
         </div>
+        <div className="format-actions">
+          <span className="actionsType">Choose color:</span>
+          <button
+            onClick={() => styling('green')}
+            className="format-action buttonColor green"
+            type="button"
+          />
+          <button
+            onClick={() => styling('red')}
+            className="format-action buttonColor red"
+            type="button"
+          />
+          <button
+            onClick={() => styling('blue')}
+            className="format-action buttonColor blue"
+            type="button"
+          />
+        </div>
       </div>
     );
   }

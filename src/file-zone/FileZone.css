@@ -17,23 +17,3 @@
 .text {
   padding: 15px;
 }
-
-.text > .textItem {
-  transition: 0.3s color ease;
-}
-
-.text > .textItem:hover {
-  color: red;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.underline {
-  text-decoration: underline;
-}

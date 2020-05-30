@@ -25,6 +25,7 @@ const App = () => {
           bold: false,
           italic: false,
           underline: false,
+          color: 'unset'
         };
       }),
     );
@@ -90,6 +91,27 @@ const App = () => {
 
       case 'rightMax':
         setnTab(11);
+        break;
+
+      case 'green':
+        textStateArr[openPopup].color === 'green'
+          ? newState[openPopup].color = 'unset'
+          : newState[openPopup].color = 'green';
+        setTextArr(newState);
+        break;
+
+      case 'red':
+        textStateArr[openPopup].color === 'red'
+          ? newState[openPopup].color = 'unset'
+          : newState[openPopup].color = 'red';
+        setTextArr(newState);
+        break;
+
+      case 'blue':
+        textStateArr[openPopup].color === 'blue'
+          ? newState[openPopup].color = 'unset'
+          : newState[openPopup].color = 'blue';
+        setTextArr(newState);
         break;
 
       default:

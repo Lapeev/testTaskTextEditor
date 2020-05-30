@@ -11,15 +11,7 @@ const FileZone = ({
   closePopup,
   nTab,
   handleChooseSynonym,
-}) => {
-  const style = el => {
-    const { bold, italic, underline } = el;
-    return `textItem ${bold && 'bold'} ${italic && 'italic'} ${
-      underline && 'underline'
-    }`.replace(/false/g, '');
-  };
-
-  return (
+}) => (
     <div id="file-zone">
       <div id="file">
         <div
@@ -32,7 +24,14 @@ const FileZone = ({
             <span
               key={el.id}
               onClick={() => handleClick(el.id)}
-              className={style(el)}
+              className="textItem"
+              style={{
+                fontWeight: `${el.bold ? 'bold' : 'unset'}`,
+                fontStyle: `${el.italic ? 'italic' : 'unset'}`,
+                textDecoration: `${el.underline ? 'underline' : 'unset'}`,
+                color: `${el.color}`,
+                cursor: 'pointer',
+              }}
             >
               {el.name}
               {i !== textStateArr.length - 1 && ' '}
@@ -44,14 +43,12 @@ const FileZone = ({
             el={textStateArr[openPopup]}
             styling={styling}
             closePopup={closePopup}
-            style={style}
             handleChooseSynonym={handleChooseSynonym}
           />
         )}
       </div>
     </div>
-  );
-};
+);
 
 FileZone.defaultProps = {
   openPopup: null,

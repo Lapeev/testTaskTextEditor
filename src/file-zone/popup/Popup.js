@@ -5,7 +5,7 @@ import ControlPanel from '../../control-panel/ControlPanel';
 import { Context } from '../../context';
 import SynonymsList from './synonymsList/synonymsList';
 
-const Popup = ({ el, styling, closePopup, style, handleChooseSynonym }) => {
+const Popup = ({ el, styling, closePopup, handleChooseSynonym }) => {
   const { name, id } = el;
 
   const { loading, handleSetWord, wordArr = [] } = useContext(Context);
@@ -23,7 +23,13 @@ const Popup = ({ el, styling, closePopup, style, handleChooseSynonym }) => {
   return (
     <div onClick={closePopup} className="popupWrapper">
       <div className="popupBody">
-        <p className={style(el)}>{name}</p>
+        <p style={{
+                fontWeight: `${el.bold ? 'bold' : 'unset'}`,
+                fontStyle: `${el.italic ? 'italic' : 'unset'}`,
+                textDecoration: `${el.underline ? 'underline' : 'unset'}`,
+                color: `${el.color}`,
+              }}
+              className="textItem">{name}</p>
         <ControlPanel styling={styling} />
         {loading ? (
           <p className="loading">Synonyms are loading</p>
@@ -51,7 +57,6 @@ Popup.propTypes = {
   }).isRequired,
   styling: PropTypes.func.isRequired,
   closePopup: PropTypes.func.isRequired,
-  style: PropTypes.func.isRequired,
   handleChooseSynonym: PropTypes.func.isRequired,
 };
 

@@ -22,3 +22,20 @@
 .format-action:not(:last-child) {
   margin-right: 5px;
 }
+
+.buttonColor {
+  width: 22px;
+  height: 22px;
+}
+
+.green {
+  background: green;
+}
+
+.red {
+  background: red;
+}
+
+.blue {
+  background: blue;
+}
