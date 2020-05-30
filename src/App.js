@@ -148,7 +148,9 @@ const App = () => {
             )}
           </main>
         ) : (
-          <p className="loadingText">loading</p>
+          <main>
+            <p className="loadingText">loading</p>
+          </main>
         )}
       </div>
     </AppContext>
