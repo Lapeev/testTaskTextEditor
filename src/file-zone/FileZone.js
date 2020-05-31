@@ -64,6 +64,7 @@ FileZone.propTypes = {
       bold: PropTypes.bool.isRequired,
       italic: PropTypes.bool.isRequired,
       underline: PropTypes.bool.isRequired,
+      color: PropTypes.string.isRequired,
     }),
   ).isRequired,
   openPopup: PropTypes.number,

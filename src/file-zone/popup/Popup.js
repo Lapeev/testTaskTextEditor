@@ -8,7 +8,7 @@ import SynonymsList from './synonymsList/synonymsList';
 const Popup = ({ el, styling, closePopup, handleChooseSynonym }) => {
   const { name, id } = el;
 
-  const { loading, handleSetWord, wordArr = [] } = useContext(Context);
+  const { handleSetWord, wordArr = [], awaiting } = useContext(Context);
 
   useEffect(() => {
     handleSetWord(name);
@@ -31,7 +31,7 @@ const Popup = ({ el, styling, closePopup, handleChooseSynonym }) => {
               }}
               className="textItem">{name}</p>
         <ControlPanel styling={styling} />
-        {loading ? (
+        {awaiting ? (
           <p className="loading">Synonyms are loading</p>
         ) : wordArr.length > 0 ? (
           <SynonymsList
@@ -54,6 +54,7 @@ Popup.propTypes = {
     bold: PropTypes.bool.isRequired,
     italic: PropTypes.bool.isRequired,
     underline: PropTypes.bool.isRequired,
+    color: PropTypes.string.isRequired,
   }).isRequired,
   styling: PropTypes.func.isRequired,
   closePopup: PropTypes.func.isRequired,
