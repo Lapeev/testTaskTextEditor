@@ -61,14 +61,14 @@ export const AppContext = ({ children }) => {
 
   useEffect(() => {
     if (word !== '') {
+      clearTimeout(wordArrTimeOutId);
+      setOpen(false);
       setWordArrTimeOutId(
         setTimeout(() => {
           setAwaiting(true);
           setOpen(true);
         }, 0),
       );
-      clearTimeout(wordArrTimeOutId);
-      setOpen(false);
     }
     setWordArr([]);
   }, [word]);
